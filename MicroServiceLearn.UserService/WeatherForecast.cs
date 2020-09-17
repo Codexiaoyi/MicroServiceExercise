@@ -1,6 +1,6 @@
 using System;
 
-namespace MicroServiceLearn.Core
+namespace MicroServiceLearn.UserService
 {
     public class WeatherForecast
     {
