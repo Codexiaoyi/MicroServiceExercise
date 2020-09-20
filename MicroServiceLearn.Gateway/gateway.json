@@ -1,0 +1,23 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/{url}", //下游地址，就是访问服务所需要的地址
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/{url}", //上游地址，就是访问网关的路由地址
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "ServiceName": "user_service",//consul的组名
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"//轮询
+      },
+      "UseServiceDiscovery": true//启动服务发现
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:1000",//网关的url
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",//consul的ip
+      "Port": "8501",//consul的port
+      "Type": "Consul"
+    }
+  }
+}

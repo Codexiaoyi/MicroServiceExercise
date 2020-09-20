@@ -12,10 +12,10 @@ namespace MicroServiceLearn.UserService.Extension
     {
         public static void UseConsul(this IApplicationBuilder app, IConfiguration configuration, IConsulClient consul)
         {
-            string consulGroup = configuration["ConsulGroup"];
+            string serviceGroup = configuration["ServiceGroup"];
             string ip = configuration["ip"];
             int port = Convert.ToInt32(configuration["port"]);
-            string serviceId = $"{consulGroup}_{ip}_{port}";
+            string serviceId = $"{serviceGroup}_{ip}_{port}";
 
             //健康检查
             var check = new AgentServiceCheck()
@@ -32,7 +32,7 @@ namespace MicroServiceLearn.UserService.Extension
                 Check = check,
                 Address = ip,
                 Port = port,
-                Name = consulGroup,
+                Name = serviceGroup,
                 ID = serviceId
             };
 

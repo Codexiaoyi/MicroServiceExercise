@@ -28,7 +28,7 @@ namespace MicroServiceLearn.UserService
         {
             services.AddSingleton<IConsulClient>(x => new ConsulClient(c =>
             {
-                c.Address = new Uri("http://localhost:8500");
+                c.Address = new Uri("http://localhost:8501");
             }));
 
             services.AddSwaggerGen(s =>
