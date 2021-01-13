@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceLearn.UserService", "MicroServiceLearn.UserService\MicroServiceLearn.UserService.csproj", "{5AF72F8B-372A-4866-8CBB-8A640F3611B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceLearn.Gateway", "MicroServiceLearn.Gateway\MicroServiceLearn.Gateway.csproj", "{28F25B8F-35F0-4C88-9943-1196B8A004BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceLearn.Gateway", "MicroServiceLearn.Gateway\MicroServiceLearn.Gateway.csproj", "{28F25B8F-35F0-4C88-9943-1196B8A004BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleDemos", "SampleDemos", "{CF3C88FF-7FB9-46AD-A020-9DF401F63EEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionAutofacDemo", "DependencyInjectionAutofacDemo\DependencyInjectionAutofacDemo.csproj", "{E7E200A6-9021-4702-92D6-FF00AC0C3394}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{28F25B8F-35F0-4C88-9943-1196B8A004BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28F25B8F-35F0-4C88-9943-1196B8A004BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28F25B8F-35F0-4C88-9943-1196B8A004BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7E200A6-9021-4702-92D6-FF00AC0C3394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7E200A6-9021-4702-92D6-FF00AC0C3394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7E200A6-9021-4702-92D6-FF00AC0C3394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7E200A6-9021-4702-92D6-FF00AC0C3394}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7E200A6-9021-4702-92D6-FF00AC0C3394} = {CF3C88FF-7FB9-46AD-A020-9DF401F63EEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46AAEA5C-FD32-4232-A03B-033D1F5F4728}

@@ -1,6 +1,6 @@
 using System;
 
-namespace MicroServiceLearn.UserService
+namespace DependencyInjectionAutofacDemo
 {
     public class WeatherForecast
     {
