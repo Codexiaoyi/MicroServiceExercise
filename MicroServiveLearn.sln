@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceLearn.Gateway",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleDemos", "SampleDemos", "{CF3C88FF-7FB9-46AD-A020-9DF401F63EEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionAutofacDemo", "DependencyInjectionAutofacDemo\DependencyInjectionAutofacDemo.csproj", "{E7E200A6-9021-4702-92D6-FF00AC0C3394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjectionAutofacDemo", "DependencyInjectionAutofacDemo\DependencyInjectionAutofacDemo.csproj", "{E7E200A6-9021-4702-92D6-FF00AC0C3394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddlewareDemo", "MiddlewareDemo\MiddlewareDemo.csproj", "{0329A4AA-D771-4BD8-91BD-2A8583A4D091}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,12 +31,17 @@ Global
 		{E7E200A6-9021-4702-92D6-FF00AC0C3394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7E200A6-9021-4702-92D6-FF00AC0C3394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7E200A6-9021-4702-92D6-FF00AC0C3394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0329A4AA-D771-4BD8-91BD-2A8583A4D091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0329A4AA-D771-4BD8-91BD-2A8583A4D091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0329A4AA-D771-4BD8-91BD-2A8583A4D091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0329A4AA-D771-4BD8-91BD-2A8583A4D091}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E7E200A6-9021-4702-92D6-FF00AC0C3394} = {CF3C88FF-7FB9-46AD-A020-9DF401F63EEC}
+		{0329A4AA-D771-4BD8-91BD-2A8583A4D091} = {CF3C88FF-7FB9-46AD-A020-9DF401F63EEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46AAEA5C-FD32-4232-A03B-033D1F5F4728}
