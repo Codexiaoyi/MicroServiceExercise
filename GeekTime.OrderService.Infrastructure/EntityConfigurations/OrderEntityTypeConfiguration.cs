@@ -7,12 +7,12 @@ using System.Text;
 
 namespace GeekTime.OrderService.Infrastructure.EntityConfigurations
 {
-    internal class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
+    class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
     {
         public void Configure(EntityTypeBuilder<Order> builder)
         {
             builder.HasKey(p => p.Id);
-            //.ToTable("order");
+            builder.ToTable("order");
             builder.Property(p => p.UserId).HasMaxLength(20);
             builder.Property(p => p.UserName).HasMaxLength(30);
             builder.OwnsOne(o => o.Address, a =>

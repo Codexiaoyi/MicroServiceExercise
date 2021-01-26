@@ -10,6 +10,11 @@ namespace GeekTime.Infrastructure.Core
 {
     public class EFContext : DbContext, IUnitOfWork, ITransaction
     {
+        public EFContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
         #region ITransaction
         private IDbContextTransaction _currentContextTransaction;
         public IDbContextTransaction GetCurrentTransaction() => _currentContextTransaction;

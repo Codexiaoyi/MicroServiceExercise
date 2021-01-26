@@ -15,12 +15,12 @@ namespace GeekTime.OrderService.Api.Controllers
     {
         private readonly IMediator _mediator;
 
-        //private readonly IOrderRepository _orderRepository;
+        private readonly IOrderRepository _orderRepository;
 
-        public OrderController(IMediator mediator)
+        public OrderController(IMediator mediator,IOrderRepository orderRepository)
         {
             _mediator = mediator;
-            //_orderRepository = orderRepository;
+            _orderRepository = orderRepository;
         }
 
         [HttpGet]
@@ -29,10 +29,10 @@ namespace GeekTime.OrderService.Api.Controllers
             var address = new Address("wen san lu", "hangzhou", "310000");
             var order = new Order("xiaohong1999", "xiaohong", 25, address);
 
-            foreach (var domainEvent in order.DomainEvents)
-                await _mediator.Publish(domainEvent);
-            //_orderRepository.Add(order);
-            //await _orderRepository.UnitOfWork.SaveEntitiesAsync();
+            //foreach (var domainEvent in order.DomainEvents)
+            //    await _mediator.Publish(domainEvent);
+            _orderRepository.Add(order);
+            await _orderRepository.UnitOfWork.SaveEntitiesAsync();
             return Ok(order.Id);
         }
     }

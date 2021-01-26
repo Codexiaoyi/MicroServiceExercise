@@ -15,6 +15,8 @@ using MediatR;
 using System.Reflection;
 using System.Threading.Tasks;
 using GeekTime.OrderService.Domain.OrderAggregate;
+using GeekTime.OrderService.Api.Extensions;
+using GeekTime.OrderService.Infrastructure;
 
 namespace GeekTime.OrderService.Api
 {
@@ -36,8 +38,9 @@ namespace GeekTime.OrderService.Api
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
             });
-            services.AddMediatR(typeof(Order).Assembly, typeof(Program).Assembly);
-            //services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddMediatRServices();
+            services.AddMySqlDomainContext(Configuration.GetValue<string>("MySql"));
+            services.AddRepositories();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -50,6 +53,13 @@ namespace GeekTime.OrderService.Api
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 });
                 app.UseDeveloperExceptionPage();
+            }
+
+            //获取服务判断是否有对应数据库，没有则根据实体创建
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                var dc = scope.ServiceProvider.GetService<OrderContext>();
+                dc.Database.EnsureCreated();
             }
 
             app.UseRouting();

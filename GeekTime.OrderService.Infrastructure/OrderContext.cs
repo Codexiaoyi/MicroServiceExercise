@@ -8,6 +8,11 @@ namespace GeekTime.OrderService.Infrastructure
 {
     public class OrderContext : EFContext
     {
+        public OrderContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
         public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

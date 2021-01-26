@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GeekTime.Infrastructure.Core\GeekTime.Infrastructure.Core.csproj" />
     <ProjectReference Include="..\GeekTime.Order.Domain\GeekTime.OrderService.Domain.csproj" />
   </ItemGroup>
