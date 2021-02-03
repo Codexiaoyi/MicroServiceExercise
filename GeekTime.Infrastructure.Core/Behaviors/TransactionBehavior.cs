@@ -44,7 +44,7 @@ namespace GeekTime.Infrastructure.Core.Behaviors
 
                         response = await next();
 
-                        _logger.LogInformation("----- 提交事务 {TransactionId} {CommandName}", transaction.TransactionId);
+                        _logger.LogInformation("----- 提交事务 {TransactionId} ", transaction.TransactionId);
 
 
                         await _dbContext.CommitTransactionAsync(transaction);

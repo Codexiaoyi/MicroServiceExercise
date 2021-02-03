@@ -13,7 +13,7 @@ namespace GeekTime.OrderService.Api.Application.DomainEventHandlers
 
         public Task Handle(OrderCreatedDomainEvent notification, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return Task.CompletedTask;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace GeekTime.Infrastructure.Core
 
         public Task<IDbContextTransaction> BeginTransactionAsync()
         {
-            if (!HasActiveTransaction) return null;
+            if (HasActiveTransaction) return null;
             _currentContextTransaction = Database.BeginTransaction();
             return Task.FromResult(_currentContextTransaction);
         }
